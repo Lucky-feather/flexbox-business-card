@@ -36,39 +36,48 @@ text-align: center;
 
 #status {
 display:flex;
-justify-content: flex-end;
-padding-right: 10px;
+justify-content: flex-start;
+align-items: center;
+padding-left: 10px;
+margin: 0px;
 }
+
 #img-container {
 display: flex;
 justify-content: center;
 align-items: center;
-height: 125px;
+height: 150px;
+background-color: white;
 }
+
 img{
 height:auto;
 }
 
 h1 { 
-font-size: 24px;
-text-align: center;
+font-size: 28px;
+margin: 8px;
+padding:0;
 }
 
 h3 {
-background-color: darkgoldenrod;
+background-color: rgb(198, 177, 125);
 padding: 20px;
+justify-content: left;
 margin: 0;
 }
 
 #description {
 display : none;
 }
+
 h3
 #offer {
 padding: 50px 0;
 font-style: bold;
 justify-content: center;
 }
+
 #contact {
 display:flex;
 padding: 0;
@@ -87,6 +96,7 @@ margin: 0px;
 #contact > p:first-child {
 background-color: darkslategray;
 }
+
 #contact > p:last-child {
 background-color: dimgrey;
 }
@@ -103,37 +113,54 @@ grid-template-rows:auto auto auto auto auto;
 padding: 0;
 }
 
+
 #img-container {
-grid-row: 2/5;
+grid-row: 2/4;
+height: 130px;
 }
+
 .right-column {
 grid-column: 2/3;
+display: flex;
+align-items: center;
 }
+
 h1 {
 grid-row: 2/3;
+justify-content: center;
+font-size: 25px;
+height: 30px;
 }
+
 h3 {
 grid-row: 3/4;
-padding: 10px;
+padding: 0px;
+justify-content: flex-start;
+align-items: baseline;
+height: 28px;
 }
+
 #offer {
-grid-row: 4/5;
+display: flex;
+grid-row: 5/6;
+align-items: center;
+justify-content: center;
 }
 #contact { 
 grid-column: 1/2;
-grid-row: 5/6;
+grid-row: 4/6;
 height: 15px
 }
 #description{
-display: grid;
-grid-row: 5/6;
-padding-top: 20px;
+display: flex;
+grid-row: 4/5;
+align-items: center;
 }
 #status {
-    grid-column: 1/3;
+    grid-column: 1/2;
 }
 #contact > p {
-    height: 65px;
+    height: 70px;
 }
 
 }
