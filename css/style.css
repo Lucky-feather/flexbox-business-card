@@ -1,0 +1,131 @@
+html {
+box-sizing: border-box
+}
+
+/* The Universal Selector */
+*, /* All elements*/
+*::before, /* All ::before pseudo-elements */
+*::after { /* All ::after pseudo-elements */
+/* height & width will now include border & padding by default
+but can be over-ridden as needed */
+/* box-sizing: inherit; */
+}
+
+/* resets font size to be 62.5% of the user preference - 
+in most browser configurations this will be 10px */
+:root {
+font-size: 62.5%;
+}
+
+body {
+background-color: gray;
+font-family: Ubuntu;
+margin: 0;
+min-height: 100vh;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+main {
+max-height: 400px;
+width: 250px;
+background-color: white;
+text-align: center;
+}
+
+#status {
+display:flex;
+justify-content: flex-end;
+padding-right: 8px, 20px, 0, 0;
+}
+#img-container {
+display: flex;
+justify-content: center;
+align-items: center;
+height: 125px;
+}
+img{
+height:auto;
+}
+h1 { 
+font-size: 24px;
+text-align: center;
+}
+
+h3 {
+background-color: darkgoldenrod;
+padding: 20px;
+margin: 0;
+}
+
+#description {
+display : none;
+}
+h3
+#offer {
+padding: 50px 0;
+font-style: bold;
+justify-content: center;
+}
+#contact {
+display:flex;
+padding: 0;
+border:0;
+margin: 60px 0;
+}
+
+#contact > p {
+height: 60px;
+width: 50%;
+display: flex;
+justify-content: center;
+align-items: center;
+margin: 0px;
+}
+#contact > p:first-child {
+background-color: darkslategray;
+}
+#contact > p:last-child {
+background-color: dimgrey;
+}
+
+@media only screen and (min-width: 600px) {
+
+main {
+grid-column: auto;
+display: grid;
+height: 250px;
+width: 400px;
+grid-template-columns: 40% 60%;
+grid-template-rows:auto auto auto auto auto;
+}
+#img-container {
+grid-row: 2/5;
+}
+.right-column {
+grid-column: 2/3;
+}
+h1 {
+grid-row: 2/3;
+}
+h3 {
+grid-row: 3/4;
+padding: 10px;
+}
+#offer {
+grid-row: 4/5;
+}
+#contact { 
+grid-column: 1/2;
+grid-row: 5/6;
+height: 15px
+}
+#description{
+display: grid;
+grid-row: 5/6;
+padding-top: 20px;
+}
+
+}
+
